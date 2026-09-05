@@ -1,0 +1,78 @@
+.captcha {
+  margin-bottom: 26px;
+}
+
+.captcha-label {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.slide-track {
+  position: relative;
+  height: 44px;
+  border-radius: 22px;
+  background: var(--paper-dim);
+  overflow: hidden;
+  user-select: none;
+}
+
+.slide-fill {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background: #ddeade;
+  border-radius: 22px;
+}
+
+.slide-track.verified .slide-fill {
+  background: #cfe6d5;
+  transition: width 0.2s ease;
+}
+
+.slide-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.slide-track.verified .slide-text {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.slide-handle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  touch-action: none;
+  color: var(--paper);
+}
+
+.slide-handle:active {
+  cursor: grabbing;
+}
+
+.slide-handle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.slide-track.verified .slide-handle {
+  background: var(--success);
+  left: calc(100% - 41px);
+}

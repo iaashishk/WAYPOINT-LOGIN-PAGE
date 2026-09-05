@@ -1,0 +1,35 @@
+:root {
+  --ink: #16241d;
+  --ink-soft: #1f3126;
+  --ink-line: #3a4d3f;
+  --paper: #f8f7f3;
+  --paper-dim: #eeece4;
+  --text-dark: #1c2420;
+  --text-muted: #75806f;
+  --accent: #c1872f;
+  --accent-dark: #9c6d24;
+  --success: #4c7a5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-dark);
+  background: var(--paper);
+}
+
+button,
+input {
+  font-family: inherit;
+}
